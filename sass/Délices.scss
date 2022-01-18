@@ -1,0 +1,771 @@
+@import 'Keyframes.scss';
+/*Les mixins*/ 
+ /*La palette de couleurs*/
+ @mixin gradient{
+    background:linear-gradient(100deg,#e571da,#c566db,#9356dc);  
+}
+/*Mes mixines*/
+@mixin phone {
+    max-width:412px;
+    opacity: 1;
+}
+@keyframes price-animation {
+    from{right: 0;}
+    to{right:60px;}    
+}
+/*logo du check vert*/
+@keyframes rotation-animation {
+    from{transform: rotate(0deg);}
+    to{ transform: rotate(360deg);}
+}
+@keyframes green-animation {
+    0%{
+        transform: translateX(0);       
+    } 
+    10%{
+        transform: translateX(-10%);
+        
+    }
+    20%{
+        transform: translateX(-20%);        
+    }
+    30%{
+        transform: translateX(-30%);
+    }
+    40%{
+        transform: translateX(-40%); 
+    } 
+    50%{
+        transform: translateX(-50%);
+    }
+    60%{
+        transform: translateX(-60%);        
+    }
+    70%{
+        transform: translateX(-70%);
+    }
+    80%{
+        transform: translateX(-80%);
+    }
+    90%{
+        transform: translateX(-90%);        
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes green-animation-back {
+    0%{
+        transform: translateX(0);       
+    } 
+    10%{
+        transform: translateX(-10%);
+        
+    }
+    20%{
+        transform: translateX(-20%);        
+    }
+    30%{
+        transform: translateX(-30%);
+    }
+    40%{
+        transform: translateX(-40%); 
+    } 
+    50%{
+        transform: translateX(-50%);
+    }
+    60%{
+        transform: translateX(-60%);        
+    }
+    70%{
+        transform: translateX(-70%);
+    }
+    80%{
+        transform: translateX(-80%);
+    }
+    90%{
+        transform: translateX(-90%);        
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes green-animation-scale {
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    } 
+ }  
+ @keyframes point-price-animation {
+     0%{
+         opacity: 0;
+        }
+      25%{
+          opacity: 1;
+      }  
+      75%{
+          opacity: 1;
+      }
+      100%{
+          opacity: 1;
+      }
+
+ }
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+a{
+    text-decoration: none;
+}
+body{
+    background: #f6f6f6;
+}
+h4{
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+h5{    
+    font-family: 'Roboto';
+    font-size: 18px;
+}
+h6{
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+.test{
+   @media all and(min-width:320px){
+                                                            
+        width: 80%;                      
+   }      
+   height: auto;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;   
+   position: relative;
+   transition-duration: 0.3s;
+   font-family: 'Roboto';
+   font-size: 16px;
+   left: 10px;
+}
+/*First mobile*/       
+.container{
+    @media all and(min-width:1199px){
+                                                            
+        width: 90%;
+        margin: auto;        
+    }
+    @media all and(min-width:1300px){
+                                                            
+        width: 80%;
+        margin: auto;                        
+    }
+    @media all and(min-width:1600px){
+                                                            
+        width: 75%;
+        margin: auto;                        
+    }
+
+    width: 100%;
+    margin: auto;
+    animation-name: opacity-accueil;
+    animation-duration: 0.5s;
+          header{
+                 display: flex;
+                 align-items: center;
+                 background: white;
+                 justify-content: flex-start;
+                .logo{
+                    @media all and(min-width:600px){
+                                                                    
+                        width: 90%;                        
+                        justify-content: space-around;
+                     }
+                    @media all and(min-width:768px){
+                                                            
+                        width: 85%;                        
+                        justify-content: space-around;                        
+                    }
+                    @media all and(min-width:1024px){
+                                                            
+                        width: 75%;                                        
+                        justify-content: space-around;        
+                    }                    
+
+                    margin: 12px 5%;
+                    display: flex;
+                    position: relative; 
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 55%;
+                    .image{
+                        height: auto;
+                        width: 140px;                        
+                    }            
+                }
+            }      
+ /*La partie du titre et de la photo principale*/
+           .restaurant{
+               width: 100%; 
+               height: auto;
+               background:#f6f6f6 ;                                                   
+                        &_photo{
+                            @media all and(min-width:1200px){
+                                                            
+                                width: 90%;
+                                margin: auto;                        
+                            }
+                            @media all and(min-width:1300px){
+                                                            
+                                width: 80%;
+                                margin: auto;                        
+                            }
+                            @media all and(min-width:1600px){
+                                                            
+                                width: 75%;
+                                margin: auto;                        
+                            }
+                            width:100%;
+                            height: auto;
+                            position: absolute;                                          
+                                }
+                        &_title_heart{
+                                    @media all and(min-width:600px){
+                                                                    
+                                        width: 90%;
+                                        margin: auto;
+                                     }
+                                     @media all and(min-width:768px){
+                                                                    
+                                        width: 85%;
+                                        margin: auto;
+                                     }
+                                     @media all and(min-width:1024px){
+                                                            
+                                        width: 75%;
+                                        margin: auto;                        
+                                    }
+                                     width: 100%;
+                                     background-color: #f6f6f6;
+                                     height: auto;
+                                     position: relative;     
+                                     top: 183px;                                ;
+                                     border-radius: 40px 40px 0 0;  
+                                     display: flex;
+                                     padding: 30px 0;                                                                                                                                                       
+                            }
+                            &_title{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                margin: auto;
+                                width: 90%;                                
+                                font-family: 'Raleway', sans-serif;
+                                font-family: 'Shrikhand', cursive;
+                                font-size: medium;                                 
+                            }
+                            &_title > i{
+                                font-size: x-large;
+                            }  
+                            .bloc-heart{
+                                width: 24px;
+                                height: auto;
+                                display: flex;
+                                flex-direction: row;
+                                position: relative;
+                                right: 2%;
+                                
+                                             .full-heart{
+                                                 display: flex;
+                                                 align-items: center;
+                                                 position: absolute;                                                                                        
+                                                 color:#c566db;
+                                                 right: 0; 
+                                                }
+                          
+                                                 &.blank-heart{
+                                                         display: flex;
+                                                         align-items: center;
+                                                                                                 
+                                                             }
+                                                     .full-heart > i{
+                                                                     display: flex;
+                                                                     align-items: center;
+                                                                     font-size: x-large;                                                  
+                                                                     transform: scale(0);
+                                                                     transition-duration: 2s; 
+                                                                     transform-origin: bottom;                                                                                                                                     
+                                                             }  
+                                                     .full-heart:active > i{                                           
+                                                                         transform: scale(1);
+                                                             } 
+                                                     @media all and(min-width:1025px){
+                                                                .full-heart:hover > i{                                           
+                                                                    transform: scale(1);
+                                                                }
+                                                            }                                                                                                
+                                                     .blank-heart > i{
+                                                                         display: flex;
+                                                                         align-items: center;
+                                                                         font-size: x-large; 
+                                                                         color:black;
+                                                                         transform: scale(1);
+                                                                         transition-duration: 2s;                                                        
+                                                                         position: relative;                                                                                                                                                                                
+                                                             }                                 
+                                                     
+
+                                                     }        
+                       
+           }
+   /*La section pour les entrées*/       
+   .Enter{         
+         @media all and(min-width:600px){
+                                                                    
+                width: 90%;
+                margin: auto;
+         }
+         @media all and(min-width:768px){
+                                                                    
+            width: 85%;
+            margin: auto;
+         }
+         @media all and(min-width:1024px){
+                                                            
+            width: 75%;
+            margin: auto;                        
+        }   
+         width: 100%;
+         display: flex;
+         background-color:#f6f6f6;
+         position: relative;
+         top: 179px;
+         .box{
+            @media all and(min-width:600px){
+                                                            
+                width: 85%;
+                margin: auto;
+             }             
+             width: 100%;
+             position: relative;
+             display: flex;
+             flex-direction: column;     
+             background-color: #f6f6f6; 
+             margin-bottom: 40px;
+             animation-name: opacity-accueil;
+             animation-duration: 2s;  
+             transition: all;         
+             &-enter {
+                  background-color: white;   
+                  color: black;                             
+                  width: 95%;
+                  height: 60px;
+                  margin: 0 auto 10px;  
+                  border-radius: 15px;  
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;   
+                  box-shadow: 2px 2px 6px #d9d9d9;  
+                  overflow: hidden; 
+                  &:active .green-animation{
+                    transform: translateX(-100%);                                                
+                    }   
+                @media all and(min-width:1025px){
+                &:hover > .green-animation{                                           
+                                        transform: translateX(-100%);
+                                    }
+                    }    
+                @media all and(min-width:1025px){
+                        &:hover > .point{                                           
+                        transform: translateX(-100%);
+                                        }
+                            }                                                                                    
+                &:active .point{                      
+                    transform: translateX(-100%);                                                        
+                }
+                              
+                &:active .box-enter-price-point-animation{
+                    transform: translateX(-100%);                                        
+                }
+                @media all and(min-width:1025px){
+                    &:hover .box-enter-price-point-animation{                                           
+                        transform: translateX(-100%);
+                                    }
+                        }                                      
+                &:active .green-animation > .i{
+                    animation-name: green-animation-scale;                                        
+                }
+                @media all and(min-width:1025px){
+                    &:hover .green-animation > .i{                                           
+                    animation-name: green-animation-scale;  
+                                    }
+                        }                                        
+                  &:active .test{
+                    @media all and(min-width:320px){
+                                                            
+                        width: 45%;                                
+                    }
+                    @media all and(min-width:375px){
+                                                            
+                        width: 55%;                                
+                    }
+                    @media all and(min-width: 425px){
+                                                            
+                        width: 60%;                                
+                    }
+                    @media all and(min-width: 768px){
+                                                            
+                        width: 100%;                                
+                    } 
+
+                      
+                  }                 
+                      .box-enter-price-point-animation{
+                          width:80px;                          
+                          background-color: white;
+                          display: flex;
+                          justify-content: space-between;
+                          flex-direction: row;
+                          position: absolute;                        
+                          transition-duration: 0.3s;                       
+                          right: 0px;
+                          animation-fill-mode: forwards;
+                          animation-timing-function: linear;
+                          transform: translateX(0);
+                          animation-direction: alternate;
+                                                        .point{        
+                                                            text-overflow: ellipsis;                                                                                                                                                             
+                                                            animation-fill-mode: forwards;
+                                                            transform: translateX(-20px);                                                           
+                                                            height: 30px;
+                                                            width: 100px;                                                                                                                       
+                                                        }                                                        
+
+                      }              
+                      .green-animation {
+                          position: absolute;
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                          width: 75px;
+                          height: 100%;
+                          background-color:#99E2D0;                    
+                          transform:rotate(0deg);
+                          transform:translateX(0) ;
+                          transition-duration: 0.3s;                                                   
+                          animation-timing-function: linear;   
+                          animation-fill-mode: both;                           
+                          transform-origin: right;
+                          right: -75px;
+                          animation-direction: alternate;
+                                          
+                         & > .i{
+                             color: white;
+                             font-size: x-large;  
+                             transform: rotate(0deg);                               
+                             animation-duration:0.6s;                              
+                             transform: translateX(0);                             
+                            }
+                                     
+                      }             
+             }
+             .box-animation1{
+                animation-name: opacity-accueil;
+                animation-duration: 1.2s;
+             }
+             &-animation2{
+                animation-name: opacity-accueil;
+                animation-duration: 2.8s;                              
+             }
+             &-animation3{
+                animation-name: opacity-accueil;
+                animation-duration: 4.2s;
+             }             
+             .box-enter-animation1{
+                animation-name:animation-menu; 
+                  transform: translateY(0);
+                  animation-duration: 1.8s;                                                       
+             }
+             .box-enter-animation2{
+                animation-name:animation-menu; 
+                transform: translateY(0);
+                animation-duration: 1.8s;
+                animation-delay: 0.136s;                                      
+             }
+             .box-enter-animation3{
+                animation-name:animation-menu; 
+                transform: translateY(0);
+                animation-duration: 1.8s;
+                animation-delay: 0.272s;                               
+             }
+             .box-enter-animation4{
+                animation-name:animation-menu; 
+                transform: translateY(0);
+                animation-duration: 1.8s;
+                animation-delay: 0.408s;
+             }
+             .box-enter-animation5{
+                animation-name:animation-menu; 
+                  transform: translateY(0);
+                  animation-duration: 1.8s; 
+                  animation-delay: 0.544s;                                       
+             }
+             .box-enter-animation6{
+                animation-name:animation-menu; 
+                transform: translateY(0);
+                animation-duration: 1.8s;
+                animation-delay: 0.680s;                                      
+             }
+             .box-enter-animation7{
+                animation-name:animation-menu; 
+                transform: translateY(0);
+                animation-duration: 1.8s;
+                animation-delay: 0.816s;                               
+             }
+             .box-enter-animation8{
+                animation-name:animation-menu; 
+                transform: translateY(0);
+                animation-duration: 1.8s;
+                animation-delay: 0.952s;
+             }
+             .box-enter-animation9{
+                animation-name:animation-menu; 
+                transform: translateY(0);
+                animation-duration: 1.8s;
+                animation-delay: 1.09s;
+             }
+             .box-enter-animation10{
+                animation-name:animation-menu; 
+                transform: translateY(0);
+                animation-duration: 2.1s;
+                animation-delay: 1.09s;
+             }
+             & > .box-enter-h6{
+                    width: 90%;                    
+                    font-size: x-large;
+                    display: flex;
+                    margin:0 auto 20px;
+             }
+             & > .box-enter-h6-animation1{
+                animation-name: opacity-accueil;;                
+          }
+          & > .box-enter-h6-animation2{
+             animation-name: opacity-accueil;
+             animation-delay: 1.5s;             
+          } 
+          & > .box-enter-h6-animation3{
+             animation-name: opacity-accueil;
+             animation-delay: 3s; 
+          }
+             .box-enter > .box-enter_p-price{
+                 display: flex;
+                 justify-content: space-between;
+                 margin:0 auto;
+                 width: 95%;             
+             }
+             .box-enter > h5{
+                display: flex;
+                width: 95%;
+                margin:0 auto;
+                font-size: large;                           
+            }  
+            .box-enter_p-price > p{                
+                font-size: medium;
+                padding-right: 10px;
+            }
+            span{
+                font-weight: bolder;              
+                position: absolute;                               
+                transition-timing-function: linear;
+                display: flex;
+                justify-content: center;
+                right: 20%;
+            }
+            .box-enter-h6 > .box-underline{
+                font-family: Arial, Helvetica, sans-serif;  
+                font-size: x-large; 
+                height: auto;
+                width: 44px;
+                border-bottom: 3px solid #99E2D0;
+                padding-bottom: 6px;
+            }
+           
+         }
+   } 
+  /*La section commande*/
+  .order{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 180px;
+        
+     }
+
+     .button{
+        margin: auto;         
+        font-size: 16px;                                     
+        color: white;
+        background-color: black;
+        padding: 17px 59px;
+        border-radius: 30px;           
+        @include gradient;   
+        margin-bottom: 80px; 
+        transform: scale(1);         
+        transition-duration:0.3s; 
+        position: relative;  
+        @media all and(min-width:600px){
+                                                                    
+            top: 32px;
+         }                                                        
+ }   
+    .button:active{
+       transform: scale(1.1);
+    }
+    @media all and(min-width:1025px){
+        .button:hover{                                           
+            transform: scale(1.1);
+        }
+    }                               
+}
+     
+ /*Footer*/
+ footer{
+    width: 100%;
+    position: relative;    
+    background-color: rgb(41, 41, 41);    
+    color: white;    
+    font-size: large;
+    top: 178px;
+    padding: 35px 0 30px 0;  
+       & > .footer-bloc{
+              width: 90%;
+              margin: auto;
+              flex-direction: column;
+              display:flex ;              
+              justify-content: space-around; 
+                            .logo-h3,.bloc-p-logo, .p1 > i 
+                            {
+                            display: flex;        
+                            font-size: medium;
+                            margin-right: 7px;                 
+                            }   
+                            .logo-h3,.bloc-p-logo, .p2 > i 
+                            {
+                            display: flex;        
+                            font-size: medium;
+                            margin-right: 14px; 
+                            margin-bottom: 6px;                
+                            }                           
+       }      
+            @media all and(min-width:600px) and(max-width:767.99px){
+            & > .footer-bloc{              
+                    margin: auto;
+                    flex-direction: column;
+                    display:flex ;              
+                                .bloc-p-logo{
+                                    width: auto;
+
+                                            p{
+                                                width: auto;
+                                            }
+                                }
+                                .logo-h3{
+                                    width: auto;
+                                }
+                                address{
+                                    width:auto;  
+                                }
+            }                        
+    } 
+            @media all and(min-width:768px) and(max-width:1023px){
+            & > .footer-bloc{
+                    width: 90%;
+                    margin: auto;
+                    flex-direction: column;
+                    display:flex ;
+                    justify-content: space-around;
+                    align-items: center;
+                    height: 170px;
+                                    h3{
+                                            font-size: 24px;
+                                    }
+                                    .bloc-p-logo{
+                                            p, address{
+                                                letter-spacing: 2px
+                                            }
+                                    }
+            }                        
+            }
+            @media all and(min-width:1024px) and(max-width:1399px){
+            & > .footer-bloc{
+                    width: 90%;
+                    margin: auto;
+                    flex-direction: row;
+                    display:flex ;
+                    align-items: baseline;
+            }
+                    
+            } 
+            @media(min-width:1400px){
+            & > .footer-bloc{
+                    width: 80%;
+                    margin: auto;
+                    flex-direction: row;
+                    display:flex ;
+                    align-items: baseline;
+            }
+                    
+            } 
+            .logo-h3 > h3{            
+                letter-spacing: 2px;
+                font-size: medium;
+                margin-bottom: 16px;   
+                font-family: 'Shrikhand', cursive;      
+                font-weight: 500;
+                font-size: 20px;  
+            }        
+            p > a{
+                color: white;
+            }
+            address{               
+                    a{
+                        color: white;
+                        font-style: normal; 
+                        font-family: 'Roboto';
+                        font-size: 16px;                    
+                    } 
+                    
+            }  
+        
+    
+        .logo-h3,.bloc-p-logo,p
+        {
+        display: flex;        
+        font-size: medium;                 
+        }
+        .bloc-p-logo {
+                    & p > a{
+                        color: white;
+                    } 
+                    .footer-bloc{
+                        @media all and(min-width:1024px){
+                                                                
+                                width: 80%;
+                            }
+                    }
+        }        
+        .bloc-p-logo > i{
+            font-size: small;
+        }      
+        .img-logo img{
+            width: 90px;              
+        }                                                                   
+            
+    }

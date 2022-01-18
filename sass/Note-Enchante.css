@@ -1,0 +1,888 @@
+@charset "UTF-8";
+/*LES KEYFRAMES*/
+/*Déplacement des éléments (entré, plat déssert)*/
+@keyframes animation-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(65%);
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*opacity pour l'accueil et les menus*/
+@keyframes opacity-accueil {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*Animation du loader*/
+@keyframes animation-loading {
+  from {
+    position: fixed;
+  }
+  to {
+    position: fixed;
+  }
+}
+@keyframes cercle-animation {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes animation-name-visible {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*Mouvement des points*/
+@keyframes text-animation {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(5px);
+    opacity: 1;
+  }
+  40% {
+    transform: translateX(5px);
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-animation2 {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(10px);
+    opacity: 1;
+  }
+  40% {
+    transform: translateX(10px);
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-animation3 {
+  0% {
+    transform: translatex(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(15px);
+  }
+  40% {
+    transform: translateX(15px);
+  }
+  60% {
+    transform: translateX(0px);
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateX(0px);
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+/*Les mixins*/
+/*La palette de couleurs*/
+/*Mes mixines*/
+@keyframes price-animation {
+  from {
+    right: 0;
+  }
+  to {
+    right: 60px;
+  }
+}
+/*logo du check vert*/
+@keyframes rotation-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes green-animation {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-10%);
+  }
+  20% {
+    transform: translateX(-20%);
+  }
+  30% {
+    transform: translateX(-30%);
+  }
+  40% {
+    transform: translateX(-40%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  60% {
+    transform: translateX(-60%);
+  }
+  70% {
+    transform: translateX(-70%);
+  }
+  80% {
+    transform: translateX(-80%);
+  }
+  90% {
+    transform: translateX(-90%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes green-animation-back {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-10%);
+  }
+  20% {
+    transform: translateX(-20%);
+  }
+  30% {
+    transform: translateX(-30%);
+  }
+  40% {
+    transform: translateX(-40%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  60% {
+    transform: translateX(-60%);
+  }
+  70% {
+    transform: translateX(-70%);
+  }
+  80% {
+    transform: translateX(-80%);
+  }
+  90% {
+    transform: translateX(-90%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes green-animation-scale {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes point-price-animation {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #f6f6f6;
+}
+
+h4 {
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+h5 {
+  font-family: "Roboto";
+  font-size: 18px;
+}
+
+h6 {
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+.test {
+  height: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  transition-duration: 0.3s;
+  font-family: "Roboto";
+  font-size: 16px;
+  left: 10px;
+}
+@media all and (min-width: 320px) {
+  .test {
+    width: 80%;
+  }
+}
+
+/*First mobile*/
+.container {
+  width: 100%;
+  margin: auto;
+  animation-name: opacity-accueil;
+  animation-duration: 0.5s;
+  /*La partie du titre et de la photo principale*/
+  /*La section pour les entrées*/
+  /*La section commande*/
+}
+@media all and (min-width: 1199px) {
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+}
+@media all and (min-width: 1300px) {
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media all and (min-width: 1600px) {
+  .container {
+    width: 75%;
+    margin: auto;
+  }
+}
+.container header {
+  display: flex;
+  align-items: center;
+  background: white;
+  justify-content: flex-start;
+}
+.container header .logo {
+  margin: 12px 5%;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%;
+}
+@media all and (min-width: 600px) {
+  .container header .logo {
+    width: 90%;
+    justify-content: space-around;
+  }
+}
+@media all and (min-width: 768px) {
+  .container header .logo {
+    width: 85%;
+    justify-content: space-around;
+  }
+}
+@media all and (min-width: 1024px) {
+  .container header .logo {
+    width: 75%;
+    justify-content: space-around;
+  }
+}
+.container header .logo .image {
+  height: auto;
+  width: 140px;
+}
+.container .restaurant {
+  width: 100%;
+  height: auto;
+  background: #f6f6f6;
+}
+.container .restaurant_photo {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+@media all and (min-width: 1200px) {
+  .container .restaurant_photo {
+    width: 90%;
+    margin: auto;
+  }
+}
+@media all and (min-width: 1300px) {
+  .container .restaurant_photo {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media all and (min-width: 1600px) {
+  .container .restaurant_photo {
+    width: 75%;
+    margin: auto;
+  }
+}
+.container .restaurant_title_heart {
+  width: 100%;
+  background-color: #f6f6f6;
+  height: auto;
+  position: relative;
+  top: 183px;
+  border-radius: 40px 40px 0 0;
+  display: flex;
+  padding: 30px 0;
+}
+@media all and (min-width: 600px) {
+  .container .restaurant_title_heart {
+    width: 90%;
+    margin: auto;
+  }
+}
+@media all and (min-width: 768px) {
+  .container .restaurant_title_heart {
+    width: 85%;
+    margin: auto;
+  }
+}
+@media all and (min-width: 1024px) {
+  .container .restaurant_title_heart {
+    width: 75%;
+    margin: auto;
+  }
+}
+.container .restaurant_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  width: 90%;
+  font-family: "Raleway", sans-serif;
+  font-family: "Shrikhand", cursive;
+  font-size: medium;
+}
+.container .restaurant_title > i {
+  font-size: x-large;
+}
+.container .restaurant .bloc-heart {
+  width: 24px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  right: 2%;
+}
+.container .restaurant .bloc-heart .full-heart {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  color: #c566db;
+  right: 0;
+}
+.container .restaurant .bloc-heart.blank-heart {
+  display: flex;
+  align-items: center;
+}
+.container .restaurant .bloc-heart .full-heart > i {
+  display: flex;
+  align-items: center;
+  font-size: x-large;
+  transform: scale(0);
+  transition-duration: 2s;
+  transform-origin: bottom;
+}
+.container .restaurant .bloc-heart .full-heart:active > i {
+  transform: scale(1);
+}
+.container .restaurant .bloc-heart .blank-heart > i {
+  display: flex;
+  align-items: center;
+  font-size: x-large;
+  color: black;
+  transform: scale(1);
+  transition-duration: 2s;
+  position: relative;
+}
+.container .Enter {
+  width: 100%;
+  display: flex;
+  background-color: #f6f6f6;
+  position: relative;
+  top: 179px;
+}
+@media all and (min-width: 600px) {
+  .container .Enter {
+    width: 90%;
+    margin: auto;
+  }
+}
+@media all and (min-width: 768px) {
+  .container .Enter {
+    width: 85%;
+    margin: auto;
+  }
+}
+@media all and (min-width: 1024px) {
+  .container .Enter {
+    width: 75%;
+    margin: auto;
+  }
+}
+.container .Enter .box {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  margin-bottom: 40px;
+  animation-name: opacity-accueil;
+  animation-duration: 2s;
+  transition: all;
+}
+@media all and (min-width: 600px) {
+  .container .Enter .box {
+    width: 85%;
+    margin: auto;
+  }
+}
+.container .Enter .box-enter {
+  background-color: white;
+  color: black;
+  width: 95%;
+  height: 60px;
+  margin: 0 auto 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 2px 2px 6px #d9d9d9;
+  overflow: hidden;
+}
+.container .Enter .box-enter:active .green-animation {
+  transform: translateX(-100%);
+}
+.container .Enter .box-enter:active .point {
+  transform: translateX(-100%);
+}
+.container .Enter .box-enter:active .box-enter-price-point-animation {
+  transform: translateX(-100%);
+}
+.container .Enter .box-enter:active .green-animation > .i {
+  animation-name: green-animation-scale;
+}
+@media all and (min-width: 320px) {
+  .container .Enter .box-enter:active .test {
+    width: 45%;
+  }
+}
+@media all and (min-width: 375px) {
+  .container .Enter .box-enter:active .test {
+    width: 55%;
+  }
+}
+@media all and (min-width: 425px) {
+  .container .Enter .box-enter:active .test {
+    width: 60%;
+  }
+}
+@media all and (min-width: 768px) {
+  .container .Enter .box-enter:active .test {
+    width: 100%;
+  }
+}
+.container .Enter .box-enter .box-enter-price-point-animation {
+  width: 80px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  position: absolute;
+  transition-duration: 0.3s;
+  right: 0px;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  transform: translateX(0);
+  animation-direction: alternate;
+}
+.container .Enter .box-enter .box-enter-price-point-animation .point {
+  text-overflow: ellipsis;
+  animation-fill-mode: forwards;
+  transform: translateX(-20px);
+  height: 30px;
+  width: 100px;
+}
+.container .Enter .box-enter .green-animation {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 100%;
+  background-color: #99E2D0;
+  transform: rotate(0deg);
+  transform: translateX(0);
+  transition-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  transform-origin: right;
+  right: -75px;
+  animation-direction: alternate;
+}
+.container .Enter .box-enter .green-animation > .i {
+  color: white;
+  font-size: x-large;
+  transform: rotate(0deg);
+  animation-duration: 0.6s;
+  animation-delay: 0;
+  transform: translateX(0);
+}
+.container .Enter .box .box-animation1 {
+  animation-name: opacity-accueil;
+  animation-duration: 1.2s;
+}
+.container .Enter .box-animation2 {
+  animation-name: opacity-accueil;
+  animation-duration: 2.8s;
+}
+.container .Enter .box-animation3 {
+  animation-name: opacity-accueil;
+  animation-duration: 4.2s;
+}
+.container .Enter .box .box-enter-animation1 {
+  animation-name: animation-menu;
+  transform: translateY(0);
+  animation-duration: 1.8s;
+  animation-delay: 0;
+}
+.container .Enter .box .box-enter-animation2 {
+  animation-name: animation-menu;
+  transform: translateY(0);
+  animation-duration: 1.8s;
+  animation-delay: 0.136s;
+}
+.container .Enter .box .box-enter-animation3 {
+  animation-name: animation-menu;
+  transform: translateY(0);
+  animation-duration: 1.8s;
+  animation-delay: 0.272s;
+}
+.container .Enter .box .box-enter-animation4 {
+  animation-name: animation-menu;
+  transform: translateY(0);
+  animation-duration: 1.8s;
+  animation-delay: 0.408s;
+}
+.container .Enter .box .box-enter-animation5 {
+  animation-name: animation-menu;
+  transform: translateY(0);
+  animation-duration: 1.8s;
+  animation-delay: 0.544s;
+}
+.container .Enter .box .box-enter-animation6 {
+  animation-name: animation-menu;
+  transform: translateY(0);
+  animation-duration: 1.8s;
+  animation-delay: 0.68s;
+}
+.container .Enter .box .box-enter-animation7 {
+  animation-name: animation-menu;
+  transform: translateY(0);
+  animation-duration: 1.8s;
+  animation-delay: 0.816s;
+}
+.container .Enter .box .box-enter-animation8 {
+  animation-name: animation-menu;
+  transform: translateY(0);
+  animation-duration: 1.8s;
+  animation-delay: 0.952s;
+}
+.container .Enter .box .box-enter-animation9 {
+  animation-name: animation-menu;
+  transform: translateY(0);
+  animation-duration: 1.8s;
+  animation-delay: 1.09s;
+}
+.container .Enter .box .box-enter-animation10 {
+  animation-name: animation-menu;
+  transform: translateY(0);
+  animation-duration: 2.1s;
+  animation-delay: 1.09s;
+}
+.container .Enter .box > .box-enter-h6 {
+  width: 90%;
+  font-size: x-large;
+  display: flex;
+  margin: 0 auto 20px;
+}
+.container .Enter .box > .box-enter-h6-animation1 {
+  animation-name: opacity-accueil;
+  animation-delay: 0;
+}
+.container .Enter .box > .box-enter-h6-animation2 {
+  animation-name: opacity-accueil;
+  animation-delay: 1.5s;
+}
+.container .Enter .box > .box-enter-h6-animation3 {
+  animation-name: opacity-accueil;
+  animation-delay: 3s;
+}
+.container .Enter .box .box-enter > .box-enter_p-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 95%;
+}
+.container .Enter .box .box-enter > h5 {
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
+  font-size: large;
+}
+.container .Enter .box .box-enter_p-price > p {
+  font-size: medium;
+  padding-right: 10px;
+}
+.container .Enter .box span {
+  font-weight: bolder;
+  position: absolute;
+  transition-timing-function: linear;
+  display: flex;
+  justify-content: center;
+  right: 20%;
+}
+.container .Enter .box .box-enter-h6 > .box-underline {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  height: auto;
+  width: 44px;
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 6px;
+}
+.container .order {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 180px;
+}
+.container .button {
+  margin: auto;
+  font-size: 16px;
+  color: white;
+  background-color: black;
+  padding: 17px 59px;
+  border-radius: 30px;
+  background: linear-gradient(100deg, #e571da, #c566db, #9356dc);
+  margin-bottom: 80px;
+  transform: scale(1);
+  transition-duration: 0.3s;
+  position: relative;
+}
+@media all and (min-width: 600px) {
+  .container .button {
+    top: 32px;
+  }
+}
+.container .button:active {
+  transform: scale(1.1);
+}
+
+/*Footer*/
+footer {
+  width: 100%;
+  position: relative;
+  background-color: #292929;
+  color: white;
+  font-size: large;
+  top: 178px;
+  padding: 35px 0 30px 0;
+}
+footer > .footer-bloc {
+  width: 90%;
+  margin: auto;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+}
+footer > .footer-bloc .logo-h3, footer > .footer-bloc .bloc-p-logo, footer > .footer-bloc .p1 > i {
+  display: flex;
+  font-size: medium;
+  margin-right: 7px;
+}
+footer > .footer-bloc .logo-h3, footer > .footer-bloc .bloc-p-logo, footer > .footer-bloc .p2 > i {
+  display: flex;
+  font-size: medium;
+  margin-right: 14px;
+  margin-bottom: 6px;
+}
+@media all and (min-width: 600px) and (max-width: 767.99px) {
+  footer > .footer-bloc {
+    margin: auto;
+    flex-direction: column;
+    display: flex;
+  }
+  footer > .footer-bloc .bloc-p-logo {
+    width: auto;
+  }
+  footer > .footer-bloc .bloc-p-logo p {
+    width: auto;
+  }
+  footer > .footer-bloc .logo-h3 {
+    width: auto;
+  }
+  footer > .footer-bloc address {
+    width: auto;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  footer > .footer-bloc {
+    width: 90%;
+    margin: auto;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 170px;
+  }
+  footer > .footer-bloc h3 {
+    font-size: 24px;
+  }
+  footer > .footer-bloc .bloc-p-logo p, footer > .footer-bloc .bloc-p-logo address {
+    letter-spacing: 2px;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1399px) {
+  footer > .footer-bloc {
+    width: 90%;
+    margin: auto;
+    flex-direction: row;
+    display: flex;
+    align-items: baseline;
+  }
+}
+@media (min-width: 1400px) {
+  footer > .footer-bloc {
+    width: 80%;
+    margin: auto;
+    flex-direction: row;
+    display: flex;
+    align-items: baseline;
+  }
+}
+footer .logo-h3 > h3 {
+  letter-spacing: 2px;
+  font-size: medium;
+  margin-bottom: 16px;
+  font-family: "Shrikhand", cursive;
+  font-weight: 500;
+  font-size: 20px;
+}
+footer p > a {
+  color: white;
+}
+footer address a {
+  color: white;
+  font-style: normal;
+  font-family: "Roboto";
+  font-size: 16px;
+}
+footer .logo-h3, footer .bloc-p-logo, footer p {
+  display: flex;
+  font-size: medium;
+}
+footer .bloc-p-logo p > a {
+  color: white;
+}
+@media all and (min-width: 1024px) {
+  footer .bloc-p-logo .footer-bloc {
+    width: 80%;
+  }
+}
+footer .bloc-p-logo > i {
+  font-size: small;
+}
+footer .img-logo img {
+  width: 90px;
+}
+
+/*# sourceMappingURL=Note-Enchante.css.map */

@@ -1,0 +1,671 @@
+@import 'Keyframes';
+/*GENERAL*/
+*{
+ padding: 0;
+ margin: 0; 
+ box-sizing: border-box;
+a{
+ text-decoration: none; 
+ font-family: 'Roboto', sans-serif;
+ } 
+ p{
+       font-family: 'Roboto', sans-serif;   
+ }
+ /*Les variables*/
+ $color:rgb(147,86,220);     
+ $cd-btn-start: rgba(1, 28, 55, 0);
+ $cd-btn-end: rgba(1, 28, 55, 1);
+
+ /*Les mixins*/ 
+ /*La palette de couleurs*/
+@mixin gradient{
+                background:linear-gradient(100deg,#e571da,#c566db,#9356dc);  
+ }
+ @mixin gradient-color{
+       color:linear-gradient(100deg,#e571da,#c566db,#9356dc);  
+}
+ /*Les animations*/
+
+ @mixin animation-button {
+       transform: scale(1);
+       transition: transform 0.3s;                                                      
+       &:active{
+              transform: scale(1.1);  
+              color: $cd-btn-end;                                                                  
+       }      
+ } 
+ @mixin animation-button-hover {
+       transform: scale(1);
+       transition: transform 0.3s;                                                      
+       &:hover{
+              transform: scale(1.1);  
+              color: $cd-btn-end;                                                                  
+       }      
+ } 
+ @mixin animation-button2 {
+       transform: scale(1);
+       transition: transform 200ms;                                                      
+       &:hover{
+              background:rgb(147,86,220,0.1);
+       }      
+ } 
+ @mixin animation-carte {
+       transform: scale(1);
+       transition: transform 200ms;                                                      
+       &:active{
+              transform: scale(1.04);                                                                    
+       }      
+ } 
+ @mixin animation-carte-hover {
+       transform: scale(1);
+       transition: transform 200ms;                                                      
+       &:hover{
+              transform: scale(1.04);                                                                    
+       }      
+ }                                                
+                          
+/*First mobile*/                                 
+       /*Loading*/
+       .loading{
+                  width: 100%;
+                  height: 80%;
+                  background-color: #ffffff;
+                  animation-name: animation-loading; 
+                  animation-duration: 3s;   
+                  .center-cercle{
+                         position:absolute;
+                         width: 100%;
+                         height: 100%;
+                         display: flex;
+                         justify-content: center;
+                         align-items: center;
+                                   .cercle{
+                                          width: 80px;
+                                          height: 80px;
+                                          border-radius: 50%;                        
+                                          border-top: 10px solid $color;
+                                          border-bottom: 10px solid $color;
+                                          border-left:10px solid #cfcfcf;
+                                          border-right: 10px solid #cfcfcf;                         
+                                          position: absolute;
+                                          animation-name:cercle-animation;
+                                          animation-duration: 3s;  
+                                          transform: rotate(0deg);                                          
+                                          opacity: 0;          
+                                          animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);                                                     
+                                   }
+                                   .cercle-p{
+                                          position: relative;                                          
+                                          top: 10%;
+                                          font-family:'roboto';
+                                          letter-spacing: 1px;
+                                          font-weight: bolder;
+                                          font-size: large;     
+                                          transform: translate(0);                                         
+                                          animation-duration: 3s;  
+                                         animation-name: animation-name-visible; 
+                                          opacity:0;                                                                                                                                           
+                                   }
+                                   .cercle-p-point1{
+                                          position: relative;                                          
+                                          top: 10%;
+                                          font-family: Arial, Helvetica, sans-serif; ;
+                                          font-size: large;     
+                                          transform: translate(0);
+                                          animation-name: text-animation;  
+                                          animation-duration: 2.8s;
+                                          animation-delay: 0.2s;                                         
+                                          font-weight: bolder;
+                                          opacity: 0;
+                                       }                
+                                   .cercle-p-point2{
+
+                                         position: relative;                                          
+                                          top: 10%;
+                                          font-family: Arial, Helvetica, sans-serif; ;
+                                          font-size: large;     
+                                          transform: translateX(0);
+                                          animation-name: text-animation;  
+                                          animation-duration: 2.6s; 
+                                          animation-delay: 0.4s;  
+                                          font-weight: bolder;  
+                                          opacity: 0;                                      
+                                   }
+                                   .cercle-p-point3{
+                                          position: relative;                                          
+                                          top: 10%;
+                                          font-family: Arial, Helvetica, sans-serif; ;
+                                          font-size: large;     
+                                          transform: translateX(0);
+                                          animation-name: text-animation;  
+                                          animation-duration: 2.4s;  
+                                          animation-delay: 0.6s;  
+                                          font-weight: bolder;   
+                                          opacity: 0;                                       
+                                   }
+                  }               
+                  
+
+        }
+
+       /*Container*/       
+              .container{                     
+                     animation-name: opacity-accueil; 
+                     animation-duration: 11s;
+                     @media all and(min-width:1200px){
+                                                            
+                            width: 85%;
+                            margin:auto;
+                         }                           
+                     @media all and(min-width:1500px){
+                                                            
+                            width: 80%;
+                            margin:auto;
+                         }                           
+                     
+                                       
+                     
+              }
+       
+                   
+       
+       /*Header*/                     
+                     header{
+              display: flex;
+              justify-content: center;                                   
+              .logo{
+                    width: 290px;
+                    height: auto; 
+                    margin: 15px auto;
+              }
+
+              
+       }
+       /*SECTION RESERVATION*/
+       .reservation{
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              background-color: whitesmoke;
+                    .bloc-search {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                                height: 55px;
+                                background-color:#cfcfcf;
+                                 .search {
+                                        display: flex;                                            
+                                        .search-logo{
+                                        width: auto;
+                                        }                                           
+                                        .search-logo i{                                            
+                                        font-size: medium;                                          
+                                        color: black;                                                                               
+                                         }
+                                        input{
+                                        font-size: 18px;
+                                        background-color: #cfcfcf;                                           
+                                        border: none;                                
+                                        position: relative;
+                                        left: 20px;
+                                        font-family: 'roboto';
+                                        }                                             
+                                        input::placeholder{
+                                        color: black;
+                                        } 
+                                        input:focus{
+                                        outline: none;
+                                        }   
+                                  }                              
+                    }    
+                     .bloc-h{
+                              width: 100%;
+                              display: flex;
+                              justify-content: center;
+                      &--margin{
+                              margin: 30px auto 10px auto;
+                             }      
+                              h1{
+                                width: 69%;   
+                                text-align: center;
+                                font-family: 'Roboto', sans-serif;
+                                font-size: 26px;
+                                font-weight: bold;
+                                }
+                              h2{
+                                 width: 97%;
+                                 text-align: center;
+                                 font-family: 'Roboto', sans-serif;
+                                 font-size: 20px;
+                                 font-weight: lighter;                                    
+                              }                                                       
+                      }   
+                      .button{
+                             margin: auto;                             
+                             font-family: 'Roboto', sans-serif;
+                             font-size: 14px;                                
+                             color: white;
+                             padding: 18px 30px;
+                             border-radius: 30px;
+                             margin: 25px auto 40px auto;
+                             @include gradient; 
+                             @include animation-button;                             
+                             @media all and(min-width:1025px) {
+                             @include animation-button-hover    
+                             }
+                             transition: .3s;
+                             h4{
+                                   font-weight: 400;
+                                   font-size: 16px;
+                            }
+                      }                                                        
+    }
+    /*La section fonction*/  
+    .fonction{
+             width: 100%;
+             margin-top: 50px;
+             h3{
+               margin:30px auto 15px 6%;
+               font-family: 'Roboto', sans-serif;
+               font-size: 24px;
+             }
+             .bloc-button2{                              
+                           width: 85%;
+                           @media all and(min-width:1024px){
+                                                            
+                            width: 96%;
+                            margin: auto;
+                           }       
+                           margin-left: 35px;
+                           display: flex;
+                           flex-direction: column;
+                           align-items: flex-end;
+                           nav{
+                               width: 100%;                                 
+                                ul{
+                                   @media all and(min-width:1024px){
+                                                            
+                                          flex-direction: row;
+                                   }       
+                                display: flex;
+                                flex-direction: column;
+                                li{   
+                                   @media all and(min-width:1024px){
+                                                            
+                                          width:auto;
+                                   }       
+                                       width: 100%;
+                                       margin: auto;  
+                                       list-style: none;                            
+                                              .button2{
+                                                     @media all and(min-width:1024px){
+                                                            
+                                                        width: 300px;
+                                                     }
+                                                     display: flex;
+                                                     justify-content: flex-start;
+                                                     align-items: center;
+                                                     position: relative;
+                                                     width: 100%;
+                                                     height: 75px;
+                                                     border-radius: 20px;                                      
+                                                     background-color: #ebe8e8;  
+                                                     color: black; 
+                                                     font-size: 14px;
+                                                     font-weight: bolder;     
+                                                     font-family: 'Roboto', sans-serif;
+                                                     @include animation-button2;
+                                                     .button2:hover .button2 .button2_logo i {                                                        
+                                                              color:rgb(147,86,220,0.1);                                                              
+                                                     } 
+
+                                                                                                                                                                                                                                                        
+                                              &_marginbottom{
+                                                            margin-bottom: 20px;
+                                              }  
+                                              &_marginbottom_section{
+                                                                     margin-bottom: 24px; 
+                                              }      
+                                                     .button2 .button2_logo i{
+                                                                          font-size: medium;  
+                                                                          margin-right: 2%;   
+                                                                          color:gray;                                          
+                                                     }
+                                                     .button2:hover .button2_logo i{
+                                                        font-size: medium;  
+                                                        margin-right: 2%;   
+                                                        color:$color;                                          
+                                                      }                                                                                                                      
+                                                                                                                                                          
+                                                     .bloc-logo-h5{
+                                                                   display: flex;
+                                                                   position: absolute;
+                                                                   left: 40px;
+                                                                                 h5{
+                                                                                 font-size: 16px; 
+                                                                                 position: relative;
+                                                                                 left: 22px;  
+                                                                                 transition: 0.2s; 
+                                                                                 font-family: 'Roboto', sans-serif;                                                           
+                                                                                 }     
+
+                                                     }                                                                                                           
+                                                     .button2_violet{
+                                                                   width: 30px;
+                                                                   height: 30px;
+                                                                   display: flex;
+                                                                   justify-content: center;
+                                                                   align-items: center;                                                       
+                                                                   background-color: $color;                                                                   
+                                                                   color: white;
+                                                                   position: absolute;
+                                                                   left: -14px;
+                                                                   border-radius: 50px;                                                           
+                                                     }
+                                              }    
+                                }  
+                         }                                                                             
+                   }                                                     
+             }                                
+    }
+    /*La section restaurant*/
+    .restaurant{
+                background-color: whitesmoke;
+                .bloc-h3{
+                     width: 90%;
+                     margin: 40px auto 20px auto;
+                     padding-top: 43px;
+                     font-family: 'Roboto', sans-serif;                                
+                   }
+                .bloc-cartes{
+                            width: 100%;
+                            display: flex;
+                            @media all and(min-width:1024px){
+                                                            
+                                   flex-direction: row;
+                                   flex-wrap: wrap;
+                                   width: 87%;
+                                   margin:auto;                                }  
+                                                        
+                            flex-direction: column;
+                            justify-content: center;                            
+                            .carte{
+                                   width: 90%;
+                                   margin: auto;
+                                   @media all and(min-width:768px){
+                                                            
+                                          width: 80%;
+                                       }
+                                   @media all and(min-width:1024px){
+                                                            
+                                          width: 410px;
+                                       }
+                                   @media all and(min-width:1025px){
+                                          @include animation-carte-hover;
+                                   }    
+                                   height: 233px;
+                                   position: relative;
+                                   margin: auto;
+                                   overflow: hidden;
+                                   border-radius: 20px;                                                                                               
+                            &_marginbottom{
+                                           margin-bottom: 20px;
+                                           @media all and(min-width:1024px){
+                                                            
+                                                 margin-bottom: 60px;
+                                              }                           
+                             } 
+                             &_marginbottom_footer{
+                                                   margin-bottom: 60px;
+                             }     
+                                   img{
+                                          position: absolute;
+                                          width: 100%;
+                                          height: auto;
+                                          bottom: 55px;                                             
+                                   }
+                                   .img-bottom
+                                   {
+                                          position: absolute;
+                                          bottom: -35px;                                          
+                                   }
+                                   figcaption{
+                                          position: absolute;
+                                          display: flex;
+                                          flex-direction: row;
+                                          width: 100%;
+                                          height: 65px;
+                                          background-color:white ;  
+                                          bottom: 0;
+                                          }
+                                              h6{
+                                              position: relative;  
+                                              font-size: 18px;
+                                              font-family: 'Roboto', sans-serif;                                              
+                                              }
+                                              h6,p{
+                                                     font-size: 18px;                                                       
+                                                     color: black;
+                                                     font-family: 'Roboto', sans-serif;
+                                              }
+                                              .bloc-h6p-i{
+                                                          display: flex;
+                                                          width: 93%; 
+                                                          margin: auto;
+                                             
+                                                         .figcaption-bloc-h6-p{
+                                                                              display: flex;
+                                                                              flex-direction: column;
+                                                                              width: inherit;
+                                                                              justify-content: center;
+                                              }
+                                                  } 
+                                              .full-heart{
+                                                     display: flex;
+                                                     align-items: center;
+                                                     position: relative;
+                                                     right: 9px;
+                                                     height: 18px;
+                                                     top: 12px;
+                                                     color:#c566db; }
+                                              
+                                              .blank-heart{
+                                                     display: flex;
+                                                     align-items: center;
+                                                                             
+                                          }
+                                    figcaption .full-heart > i{
+                                                 display: flex;
+                                                 align-items: center;
+                                                 font-size: x-large;                                                  
+                                                 transform: scale(0);
+                                                 transition-duration: 2s; 
+                                                 transform-origin: bottom;                                                                                                                                     
+                                                 }
+                                   figcaption .full-heart:active > i{                                           
+                                                        transform: scale(1); 
+                                                 }  
+                                      @media all and(min-width :1025px){
+                                          figcaption .full-heart:hover > i{                                           
+                                                 transform: scale(1); 
+                                          }       
+                                      }                                                                                        
+                                   figcaption .blank-heart > i{
+                                                        display: flex;
+                                                        align-items: center;
+                                                        font-size: x-large; 
+                                                        color:black;
+                                                        transform: scale(1);
+                                                        transition-duration: 2s;                                                        
+                                                        position: relative;
+                                                        left: 15px;                                                                                                
+                                                        }  
+                                  .bloc-green-card{
+                                         width: 95%;
+                                         height: 100%;                                         
+                                         position: relative;
+                                         display: flex;
+                                         justify-content: end;                                         
+                                                   .green-card{                                                             
+                                                              background-color:#99E2D0;                                                                                                                            ;
+                                                              position: absolute;
+                                                              z-index: 10;
+                                                              top: 20px;
+                                                              text-align: center;
+                                                              padding: 5px;
+                                                              border-radius: 2px;
+                                                              & > h6{
+                                                                     color:#256d5b;
+                                                                     font-family: 'Roboto', sans-serif;
+                                                                     font-size: medium;
+                                                              }
+                                                   }
+
+                                                                                   
+                                   }                                                                  
+                           }
+              }
+    }
+         
+}
+.logo-h3 > h3{            
+       letter-spacing: 2px;
+       font-size: medium;
+       margin-bottom: 16px;   
+       font-family: 'Shrikhand', cursive;      
+       font-weight: 500;
+       font-size: 20px;  
+   }        
+   p > a{
+       color: white;
+   }
+   address{               
+            a{
+                color: white;
+                font-style: normal; 
+                font-family: 'Roboto';
+                font-size: 16px;                    
+            } 
+            
+      }  
+   
+
+   .logo-h3,.bloc-p-logo,p
+   {
+   display: flex;        
+   font-size: medium;                 
+   }
+   .bloc-p-logo {
+                & p > a{
+                    color: white;
+                } 
+                .footer-bloc{
+                     @media all and(min-width:1024px){
+                                                            
+                            width: 80%;
+                         }
+                }
+   }        
+   .bloc-p-logo > i{
+       font-size: small;
+   }      
+   .img-logo img{
+          width: 90px;              
+   }
+/*Footer*/
+ footer{
+    width: 100%;
+    position: relative;    
+    background-color: rgb(41, 41, 41);    
+    color: white;    
+    font-size: large;
+    padding: 35px 0 30px 0;  
+       & > .footer-bloc{
+              width: 90%;
+              margin: auto;
+              flex-direction: column;
+              display:flex ;              
+              justify-content: space-around; 
+                            .logo-h3,.bloc-p-logo, .p1 > i 
+                            {
+                            display: flex;        
+                            font-size: medium;
+                            margin-right: 7px;                 
+                            }   
+                            .logo-h3,.bloc-p-logo, .p2 > i 
+                            {
+                            display: flex;        
+                            font-size: medium;
+                            margin-right: 14px; 
+                            margin-bottom: 6px;                
+                            }                           
+       }      
+    @media all and(min-width:600px) and(max-width:767.99px){
+      & > .footer-bloc{              
+              margin: auto;
+              flex-direction: column;
+              display:flex ;              
+                        .bloc-p-logo{
+                               width: auto;
+
+                                    p{
+                                           width: auto;
+                                    }
+                        }
+                        .logo-h3{
+                               width: auto;
+                        }
+                        address{
+                             width:auto;  
+                        }
+       }                        
+    } 
+    @media all and(min-width:768px) and(max-width:1023px){
+       & > .footer-bloc{
+              width: 90%;
+              margin: auto;
+              flex-direction: column;
+              display:flex ;
+              justify-content: space-around;
+              align-items: center;
+              height: 170px;
+                             h3{
+                                    font-size: 24px;
+                             }
+                             .bloc-p-logo{
+                                    p, address{
+                                           letter-spacing: 2px
+                                    }
+                             }
+       }                        
+    }
+    @media all and(min-width:1024px) and(max-width:1399px){
+       & > .footer-bloc{
+              width: 90%;
+              margin: auto;
+              flex-direction: row;
+              display:flex ;
+              align-items: baseline;
+       }
+            
+    } 
+    @media(min-width:1400px){
+       & > .footer-bloc{
+              width: 80%;
+              margin: auto;
+              flex-direction: row;
+              display:flex ;
+              align-items: baseline;
+       }
+            
+    }                                                                     
+        
+   }
+              
+         
+
+             
+   
+
+
