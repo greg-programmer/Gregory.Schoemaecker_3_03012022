@@ -299,6 +299,7 @@
 }
 * .reservation .bloc-search .search .search-logo {
   width: auto;
+  z-index:18;
 }
 * .reservation .bloc-search .search .search-logo i {
   font-size: medium;
@@ -418,6 +419,7 @@
 * .fonction .bloc-button2 nav ul li .button2 {
   display: flex;
   justify-content: flex-start;
+  box-shadow: 2px 2px 8px gainsboro;
   align-items: center;
   position: relative;
   width: 100%;
@@ -499,6 +501,7 @@
 }
 @media all and (min-width: 1024px) {
   * .restaurant .bloc-cartes {
+    box-shadow: 2px 2px 8px gainsboro;
     flex-direction: row;
     flex-wrap: wrap;
     width: 87%;
