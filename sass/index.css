@@ -299,6 +299,7 @@
 }
 * .reservation .bloc-search .search .search-logo {
   width: auto;
+  z-index: 12;
 }
 * .reservation .bloc-search .search .search-logo i {
   font-size: medium;
@@ -418,6 +419,7 @@
   font-size: 14px;
   font-weight: bolder;
   font-family: "Roboto", sans-serif;
+  box-shadow: 2px 2px 8px gainsboro; 
   transform: scale(1);
   transition: transform 200ms;
 }
@@ -498,6 +500,7 @@
 * .restaurant .bloc-cartes .carte {
   width: 410px;
   height: 233px;
+  box-shadow: 2px 2px 8px gainsboro;
   position: relative;
   margin: auto;
   overflow: hidden;
