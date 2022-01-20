@@ -371,6 +371,9 @@ h6 {
     justify-content: space-around;
   }
 }
+.container header .logo a > i {
+  color: black;
+}
 .container header .logo .image {
   height: auto;
   width: 140px;
