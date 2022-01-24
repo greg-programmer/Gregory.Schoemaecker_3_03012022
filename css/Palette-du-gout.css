@@ -300,7 +300,7 @@ h6 {
   overflow: hidden;
   text-overflow: ellipsis;
   position: relative;
-  transition-duration: 0.3s;
+  transition-duration: 0.8s;
   font-family: "Roboto";
   font-size: 16px;
   left: 10px;
