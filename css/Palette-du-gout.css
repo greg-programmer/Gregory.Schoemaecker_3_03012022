@@ -605,7 +605,7 @@ h6 {
   justify-content: space-between;
   flex-direction: row;
   position: absolute;
-  transition-duration: 0.3s;
+  transition-duration: 0.8s;
   right: 0px;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
@@ -629,7 +629,7 @@ h6 {
   background-color: #99E2D0;
   transform: rotate(0deg);
   transform: translateX(0);
-  transition-duration: 0.3s;
+  transition-duration: 0.8s;
   animation-timing-function: linear;
   animation-fill-mode: both;
   transform-origin: right;
@@ -640,7 +640,7 @@ h6 {
   color: white;
   font-size: x-large;
   transform: rotate(0deg);
-  animation-duration: 0.6s;
+  animation-duration: 0.8s;
   transform: translateX(0);
 }
 .container .Enter .box .box-animation1 {
