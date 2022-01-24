@@ -590,7 +590,7 @@
   width: inherit;
   justify-content: center;
 }
-* .restaurant .bloc-cartes .carte .full-heart {
+* .restaurant .bloc-cartes .carte .full-heart-index {
   display: flex;
   align-items: center;
   position: relative;
@@ -603,7 +603,7 @@
   display: flex;
   align-items: center;
 }
-* .restaurant .bloc-cartes .carte figcaption .full-heart > i {
+* .restaurant .bloc-cartes .carte figcaption .full-heart-index > i {
   display: flex;
   align-items: center;
   font-size: x-large;
@@ -611,11 +611,11 @@
   transition-duration: 2s;
   transform-origin: bottom;
 }
-* .restaurant .bloc-cartes .carte figcaption .full-heart:active > i {
+* .restaurant .bloc-cartes .carte figcaption .full-heart-index:active > i {
   transform: scale(1);
 }
 @media all and (min-width: 1025px) {
-  * .restaurant .bloc-cartes .carte figcaption .full-heart:hover > i {
+  * .restaurant .bloc-cartes .carte figcaption .full-heart-index:hover > i {
     transform: scale(1);
   }
 }
